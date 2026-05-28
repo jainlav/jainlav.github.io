@@ -2,7 +2,7 @@
 ## Enterprise Data Analytics Consultant with Governance-First Approach | 15 Years of Delivery Excellence
 ---
 ## Profile Summary
-I am a Data Analytics & Governance Consultant with 15 years of experience delivering end-to-end BI solutions across complex, multinational organizations. I specialize in translating enterprise business objectives into scalable data analytics solutions that connect strategy, operations, and execution. My work is recognized for architectural foresight and a consistent focus on building scalable, standardized, and reusable platforms that remain stable and extensible long after engagement.
+I am a Data Analytics & Governance Consultant with 15 years of experience delivering end-to-end BI solutions across complex, multinational organizations. I specialize in translating enterprise business objectives into scalable data & analytics solutions that connect strategy, operations, and execution. My work is recognized for architectural foresight and a consistent focus on building scalable, standardized, and reusable platforms that remain stable and extensible long after engagement.
 
 ## Key Career Highlights
 
