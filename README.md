@@ -48,7 +48,7 @@ _*The portfolio reflects Individual Contributor delivery, alongside supporting 1
 ---
 ## Certifications
 
-* **DP-750 Microsoft Certified: Azure Databricks Data Engineer Associate:** (https://www.linkedin.com/in/lavjain15](https://learn.microsoft.com/en-ca/users/lavjain-4690/credentials/2b652034c2bc4d11)
+* **DP-750 Microsoft Certified: Azure Databricks Data Engineer Associate:** [DP-750](https://www.linkedin.com/in/lavjain15](https://learn.microsoft.com/en-ca/users/lavjain-4690/credentials/2b652034c2bc4d11)
 
 ---
 ### Contact
