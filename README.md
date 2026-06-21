@@ -48,8 +48,8 @@ _*The portfolio reflects Individual Contributor delivery, alongside supporting 1
 ---
 ## Certifications
 
-* **DP-700 Microsoft Certified: Fabric Data Engineer Associate:** [DP-700]([https://www.linkedin.com/in/lavjain15](https://learn.microsoft.com/en-ca/users/lavjain-4690/credentials/2b652034c2bc4d11](https://learn.microsoft.com/en-ca/users/lavjain-4690/credentials/19252ae642f719e6)
-* **DP-750 Microsoft Certified: Azure Databricks Data Engineer Associate:** [DP-750](https://www.linkedin.com/in/lavjain15](https://learn.microsoft.com/en-ca/users/lavjain-4690/credentials/2b652034c2bc4d11)
+* **DP-700 Microsoft Certified: Fabric Data Engineer Associate:** [DP-700](https://learn.microsoft.com/en-ca/users/lavjain-4690/credentials/2b652034c2bc4d11)
+* **DP-750 Microsoft Certified: Azure Databricks Data Engineer Associate:** [DP-750](https://learn.microsoft.com/en-ca/users/lavjain-4690/credentials/2b652034c2bc4d11)
 * **Qlik:** [Qlik](https://www.linkedin.com/in/lavjain15/details/certifications/)
 * **Tableau Desktop Specialist:** [Tableau](https://www.credly.com/badges/4c4b443a-93a7-442a-a55e-da8b3c290e86)
 ---
