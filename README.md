@@ -44,6 +44,7 @@ Select a domain below to view my project experience:
 * [**Others-CRM, HR, Enterprise Performance Mgmt(6)**](/portfolio/others.md)
 
 _*The portfolio reflects Individual Contributor delivery, alongside supporting 100+ other initiatives for 28 customerrs as a part of broader team delivery._ 
+
 ---
 ### Contact
 * **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/lavjain15/)
