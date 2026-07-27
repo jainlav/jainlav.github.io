@@ -5,14 +5,14 @@ title: ""
 
 <h1 style="font-size:42px; margin-bottom:5px;">Lav Jain</h1>
 
-## Enterprise Data Analytics Consultant with Governance-First Approach  
+## Enterprise Data Analytics Leader with Governance-First Approach  
 **15 Years of Enterprise Delivery Excellence**
 
 ---
 
 ## Profile Summary
 
-I am a Data Analytics Consultant with a governance-first approach, with 15 years of experience delivering end-to-end BI and analytics solutions across complex, multinational organizations.
+I am a Data Analytics Leader with a governance-first approach, with 15 years of experience delivering end-to-end BI and analytics solutions across complex, multinational organizations.
 
 I specialize in translating enterprise business objectives into scalable data platforms that connect strategy, operations, and execution. My work is grounded in strong data governance as a core engineering capability — establishing standardized, reliable data foundations that enable consistent and scalable analytics across the enterprise.
 
