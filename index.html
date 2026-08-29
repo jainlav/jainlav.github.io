@@ -340,7 +340,7 @@
     </div>
   </div>
 
-  <!-- Universal Fetch Engine (GitHub Pages & Vercel Dual Host Support) -->
+  <!-- Universal Relative-Path Fetch Engine -->
   <script>
     async function openMarkdownModal(fileName, title) {
       const modal = document.getElementById('mdModal');
@@ -358,15 +358,13 @@
 
       const cleanFileName = fileName.replace(/^.*[\\\/]/, '');
 
-      // Determine current host path root dynamically
-      const currentPath = window.location.pathname.endsWith('/') 
-        ? window.location.pathname 
-        : window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+      // Get current directory path relative to window location to work across custom domains, Vercel & GitHub Pages
+      const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
 
       const targetPaths = [
-        `${currentPath}portfolio/${cleanFileName}`,
         `portfolio/${cleanFileName}`,
         `./portfolio/${cleanFileName}`,
+        `${basePath}portfolio/${cleanFileName}`,
         `/${cleanFileName}`
       ];
 
