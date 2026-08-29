@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lav Jain | Enterprise Data Architecture & BI Analytics Portfolio</title>
   
-  <!-- Tailwind CSS & Marked.js -->
+  <!-- Tailwind CSS, FontAwesome & Marked.js -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -169,7 +169,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- Supply Chain -->
-      <div onclick="openMarkdownModal('./portfolio/supplychain.md', 'Supply Chain Analytics')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
+      <div onclick="openMarkdownModal('portfolio/supplychain.md', 'Supply Chain Analytics')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
         <div>
           <div class="flex justify-between items-center mb-4">
             <span class="p-3 rounded-xl bg-brand-50 text-brand-600 font-bold text-lg"><i class="fa-solid fa-truck-ramp-box"></i></span>
@@ -187,7 +187,7 @@
       </div>
 
       <!-- Finance & Risk -->
-      <div onclick="openMarkdownModal('./portfolio/finance.md', 'Finance & Risk Analytics')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
+      <div onclick="openMarkdownModal('portfolio/finance.md', 'Finance & Risk Analytics')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
         <div>
           <div class="flex justify-between items-center mb-4">
             <span class="p-3 rounded-xl bg-emerald-50 text-emerald-600 font-bold text-lg"><i class="fa-solid fa-chart-line"></i></span>
@@ -205,7 +205,7 @@
       </div>
 
       <!-- Operations -->
-      <div onclick="openMarkdownModal('./portfolio/operations.md', 'Operations & Predictive Analytics')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
+      <div onclick="openMarkdownModal('portfolio/operations.md', 'Operations & Predictive Analytics')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
         <div>
           <div class="flex justify-between items-center mb-4">
             <span class="p-3 rounded-xl bg-purple-50 text-purple-600 font-bold text-lg"><i class="fa-solid fa-gears"></i></span>
@@ -223,7 +223,7 @@
       </div>
 
       <!-- Platform Scaling & Governance -->
-      <div onclick="openMarkdownModal('./portfolio/platform.md', 'Platform Scaling & Data Governance')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
+      <div onclick="openMarkdownModal('portfolio/platform.md', 'Platform Scaling & Data Governance')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
         <div>
           <div class="flex justify-between items-center mb-4">
             <span class="p-3 rounded-xl bg-amber-50 text-amber-600 font-bold text-lg"><i class="fa-solid fa-sitemap"></i></span>
@@ -241,7 +241,7 @@
       </div>
 
       <!-- Additional Initiatives -->
-      <div onclick="openMarkdownModal('./portfolio/others.md', 'Additional Multi-Industry Initiatives')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
+      <div onclick="openMarkdownModal('portfolio/others.md', 'Additional Multi-Industry Initiatives')" class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between">
         <div>
           <div class="flex justify-between items-center mb-4">
             <span class="p-3 rounded-xl bg-rose-50 text-rose-600 font-bold text-lg"><i class="fa-solid fa-cubes"></i></span>
@@ -363,13 +363,23 @@
       
       modal.classList.remove('hidden');
 
+      // Strip leading slash or dot slash for flexible URL resolution
+      const cleanPath = filePath.replace(/^(\.\/|\/)/, '');
+
       try {
-        const response = await fetch(filePath);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        // First try relative path
+        let response = await fetch(cleanPath);
+        
+        // Fallback to root absolute path if relative fetch fails
+        if (!response.ok) {
+          response = await fetch('/' + cleanPath);
+        }
+
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
         
         let rawText = await response.text();
         
-        // Remove front-matter headers (e.g. --- title: ... ---) if present in MD files
+        // Strip Front-Matter metadata if present (--- title: ... ---)
         if (rawText.startsWith('---')) {
           const secondDashIndex = rawText.indexOf('---', 3);
           if (secondDashIndex !== -1) {
@@ -382,8 +392,8 @@
         modalBody.innerHTML = `
           <div class="p-6 bg-rose-50 border border-rose-200 rounded-xl text-rose-800">
             <h4 class="font-bold text-base mb-2"><i class="fa-solid fa-triangle-exclamation me-2"></i> File Access Notice</h4>
-            <p class="text-sm">Could not automatically load <code>${filePath}</code>.</p>
-            <p class="text-xs mt-2 text-rose-600">Ensure the file exists inside your <code>portfolio/</code> directory in GitHub.</p>
+            <p class="text-sm">Could not automatically load <code>${cleanPath}</code>.</p>
+            <p class="text-xs mt-2 text-rose-600">Please verify that <code>${cleanPath}</code> exists in your repository.</p>
           </div>`;
       }
     }
@@ -394,9 +404,7 @@
 
     // Close modal on Escape key press
     document.addEventListener('keydown', function(event) {
-      if (event.key === "Escape") {
-        closeModal();
-      }
+      if (event.key === "Escape") closeModal();
     });
   </script>
 
