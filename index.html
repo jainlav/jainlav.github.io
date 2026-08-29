@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lav Jain | Enterprise Data Architecture & BI Analytics</title>
   
-  <!-- Tailwind CSS & Marked.js -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -32,33 +31,30 @@
 
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- Simple Header Bar -->
   <header class="bg-slate-900 text-white py-6 px-6 border-b border-slate-800">
     <div class="max-w-4xl mx-auto flex justify-between items-center">
       <div>
         <h1 class="text-2xl font-extrabold tracking-tight">Lav Jain</h1>
-        <p class="text-xs text-brand-400 font-semibold mt-1">Enterprise Data Architect & Analytics Lead</p>
+        <p class="text-xs text-sky-400 font-semibold mt-1">Enterprise Data Architect & Analytics Lead</p>
       </div>
       <div class="flex gap-4 text-sm font-semibold">
-        <a href="https://www.linkedin.com/in/jainlav/" target="_blank" class="hover:text-sky-400 transition"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <a href="mailto:lavj85@gmail.com" class="hover:text-sky-400 transition"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <a href="https://www.linkedin.com/in/jainlav/" target="_blank" class="hover:text-sky-400 transition"><i class="fa-brands fa-linkedin me-1"></i> LinkedIn</a>
+        <a href="mailto:jain.lav@gmail.com" class="hover:text-sky-400 transition"><i class="fa-solid fa-envelope me-1"></i> Email</a>
       </div>
     </div>
   </header>
 
-  <!-- Main Markdown Content Container -->
   <main class="max-w-4xl mx-auto px-6 py-10 w-full flex-grow">
-    <div id="content" class="bg-white p-8 sm:p-12 rounded-2xl border border-slate-200 shadow-sm prose">
+    <div id="content" class="bg-white p-8 sm:p-12 rounded-2xl border border-slate-200 shadow-sm prose max-w-none">
       <div class="flex items-center justify-center py-12 text-slate-400">
-        <i class="fa-solid fa-spinner fa-spin text-3xl me-3"></i> Loading Portfolio Content...
+        <i class="fa-solid fa-spinner fa-spin text-3xl me-3 text-sky-600"></i> Loading Portfolio Content...
       </div>
     </div>
   </main>
 
-  <!-- Minimal Footer -->
   <footer class="bg-slate-900 text-slate-400 text-xs py-6 text-center border-t border-slate-800">
     <div class="max-w-4xl mx-auto px-6">
-      © 2026 Lav Jain. Portfolio & Experience Summary.
+      © 2026 Lav Jain. Enterprise Data Architecture & BI Analytics Portfolio.
     </div>
   </footer>
 
@@ -66,7 +62,7 @@
     async function loadPortfolioMD() {
       const contentDiv = document.getElementById('content');
       
-      // Paths to check for your index.md or portfolio.md file
+      // Paths to check for markdown file
       const possiblePaths = [
         'portfolio/index.md',
         'portfolio/README.md',
@@ -87,7 +83,7 @@
       }
 
       if (rawText) {
-        // Strip YAML front-matter metadata if present
+        // Strip Front-Matter metadata (--- ... ---)
         if (rawText.startsWith('---')) {
           const secondDashIndex = rawText.indexOf('---', 3);
           if (secondDashIndex !== -1) {
@@ -95,21 +91,27 @@
           }
         }
 
-        contentDiv.innerHTML = marked.parse(rawText);
+        // Render Markdown content
+        if (typeof marked !== 'undefined' && typeof marked.parse === 'function') {
+          contentDiv.innerHTML = marked.parse(rawText);
+        } else {
+          contentDiv.innerHTML = `<pre class="whitespace-pre-wrap font-sans text-sm text-slate-700 leading-relaxed">${rawText}</pre>`;
+        }
       } else {
+        // Fallback display if index.md is missing or unreadable
         contentDiv.innerHTML = `
           <h2>Lav Jain</h2>
           <p><strong>Enterprise Data Architecture & BI Analytics Solutions Expert</strong></p>
           <p>15+ years of experience delivering scalable enterprise analytics platforms across Manufacturing, Retail, Banking, Aviation, and Telecom sectors.</p>
           <h3>Core Competencies & Ecosystems</h3>
           <ul>
-            <li><strong>Microsoft Fabric:</strong> Certified Data Engineer Associate (DP-700)</li>
-            <li><strong>Azure Databricks:</strong> Certified Data Engineer (DP-750)</li>
+            <li><strong>Microsoft Fabric:</strong> Microsoft Certified: Fabric Data Engineer Associate (DP-700)</li>
+            <li><strong>Azure Databricks:</strong> Azure Databricks Data Engineer Associate (DP-750)</li>
             <li><strong>Analytics & BI:</strong> Qlik Sense SaaS, Power BI (DP-600), Inphinity Forms</li>
             <li><strong>Architecture & Strategy:</strong> Platform Scaling, Enterprise Data Governance, Multi-tenant Data Security</li>
           </ul>
           <h3>Contact & Profiles</h3>
-          <p>Connect via <a href="https://www.linkedin.com/in/lavjain15/">LinkedIn</a> or reach out directly for executive data leadership opportunities.</p>
+          <p>Connect via <a href="https://www.linkedin.com/in/jainlav/" target="_blank">LinkedIn</a> or reach out directly via <a href="mailto:jain.lav@gmail.com">Email</a> for executive data leadership opportunities.</p>
         `;
       }
     }
