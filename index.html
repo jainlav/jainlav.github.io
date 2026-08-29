@@ -51,18 +51,16 @@
 
 <body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
 
+  <!-- Top Announcement Bar (Top-left branding removed, top-right retained) -->
   <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-6 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="font-semibold text-white">Enterprise Data Architecture & BI Analytics Portfolio</span>
-      </div>
+    <div class="max-w-7xl mx-auto flex justify-end items-center">
       <div class="flex items-center gap-4 text-slate-400">
         <span><i class="fa-solid me-1 fa-globe text-brand-500"></i> Global Delivery Excellence</span>
       </div>
     </div>
   </div>
 
+  <!-- Header Navigation -->
   <header class="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="flex items-center gap-3">
@@ -84,44 +82,51 @@
     </div>
   </header>
 
-  <section id="about" class="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white py-20 px-6 relative overflow-hidden">
+  <!-- Restructured Hero Section with Full About Me Profile -->
+  <section id="about" class="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white py-16 px-6 relative overflow-hidden">
     <div class="max-w-5xl mx-auto relative z-10">
       
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-bold tracking-wide uppercase mb-6">
-        <i class="fa-solid fa-award"></i> 15 Years Multi-Industry Delivery Excellence
+        <i class="fa-solid fa-user-tie"></i> Full Professional Bio
       </div>
       
-      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-        Translating C-Suite Vision into <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-sky-300">Scalable Analytics Products</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight mb-6 text-white">
+        About Me
       </h1>
       
-      <div class="text-slate-300 text-base sm:text-lg leading-relaxed space-y-4 mb-10 max-w-4xl font-normal">
+      <!-- Integrated Full Bio -->
+      <div class="bg-slate-800/50 border border-slate-700/60 rounded-2xl p-6 sm:p-8 backdrop-blur-sm text-slate-300 text-base leading-relaxed space-y-4 mb-8 font-normal shadow-lg">
         <p>
-          I am an Enterprise Data Architecture & BI/Analytics Solutions Expert with over 15 years of proven excellence delivering end-to-end analytics ecosystems for Sales, Operations, Procurement, HR, Finance, and Risk across Manufacturing, Retail, Banking, Aviation, and Telecom sectors globally.
+          I am an <strong class="text-white">Enterprise Data Architecture &amp; BI/Analytics Solutions Expert</strong> with over 15 years of experience architecting, scaling, and modernizing enterprise data ecosystems. My core expertise centers on transforming fragmented data landscapes into high-performance analytical assets that drive measurable revenue growth, cost optimization, and operational agility.
         </p>
         <p>
-          My focus is bridging executive strategy and technical execution—designing robust, long-term, enterprise-grade data platforms that turn raw enterprise assets into measurable revenue growth, operational efficiency, and cost optimization.
+          Throughout my career across Manufacturing, Retail, Banking, Aviation, and Telecom sectors globally, I have specialized in bridging the gap between C-suite strategy and engineering execution. From greenfield platform setups in <strong class="text-sky-400">Microsoft Fabric</strong> and <strong class="text-orange-400">Azure Databricks</strong> to custom workflow integrations with <strong class="text-emerald-400">Qlik Sense</strong> and <strong class="text-purple-400">Inphinity Forms</strong>, I design resilient solution architectures designed for governance, scalability, and self-service analytics.
+        </p>
+        <p>
+          My portfolio highlights key domain solutions including Special Pricing Agreements (SPA) rebate reconciliation, Purchase Price Variance (PPV) tracking, Risk Data Aggregation &amp; Reporting (RDAR), and predictive operational flow algorithms.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-slate-800/80">
-        <div>
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-slate-800/80">
+        <div class="bg-slate-800/30 border border-slate-800 p-4 rounded-xl">
           <div class="text-2xl font-extrabold text-white">15+ Years</div>
-          <div class="text-xs text-slate-400 mt-1">Multi-Industry Delivery</div>
+          <div class="text-xs text-slate-400 mt-1">Multi-Industry Delivery Excellence</div>
         </div>
-        <div>
+        <div class="bg-slate-800/30 border border-slate-800 p-4 rounded-xl">
           <div class="text-2xl font-extrabold text-white">8+ Years</div>
-          <div class="text-xs text-slate-400 mt-1">Technical Team Leadership</div>
+          <div class="text-xs text-slate-400 mt-1">Technical & Strategic Leadership</div>
         </div>
-        <div>
-          <div class="text-2xl font-extrabold text-white">End-to-End Scale</div>
-          <div class="text-xs text-slate-400 mt-1">Greenfield Platform & Architecture</div>
+        <div class="bg-slate-800/30 border border-slate-800 p-4 rounded-xl">
+          <div class="text-2xl font-extrabold text-white">End-to-End</div>
+          <div class="text-xs text-slate-400 mt-1">Greenfield Fabric & Cloud Deployments</div>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- Case Studies Section -->
   <section id="domains" class="py-20 px-6 max-w-7xl mx-auto w-full">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-slate-200 pb-6">
       <div>
@@ -223,6 +228,7 @@
     </div>
   </section>
 
+  <!-- Platforms & Data Ecosystems -->
   <section id="tech-stack" class="bg-slate-900 text-white py-16 px-6 mt-auto">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-12">
@@ -286,6 +292,7 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="bg-white py-16 px-6 border-t border-slate-200">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Let's Connect</h2>
@@ -304,12 +311,14 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="bg-slate-950 text-slate-500 text-xs py-6 text-center border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-6">
       © 2026 Lav Jain. All Rights Reserved. Built with Tailwind CSS & Marked.js.
     </div>
   </footer>
 
+  <!-- Dynamic Case Study Modal -->
   <div id="mdModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 sm:p-6">
     <div class="bg-white border border-slate-200 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
       
@@ -322,7 +331,7 @@
       </div>
 
       <div id="modalBody" class="p-6 sm:p-8 overflow-y-auto prose-custom max-w-none flex-grow bg-white">
-        </div>
+      </div>
 
       <div class="p-4 border-t border-slate-200 bg-slate-50 flex justify-end items-center">
         <button onclick="closeModal()" class="px-5 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-lg transition shadow">Close Window</button>
