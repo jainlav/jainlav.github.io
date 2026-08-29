@@ -145,9 +145,8 @@
           </li>
         </ul>
         
-        <div class="mt-6 pt-4 border-t border-slate-700 flex gap-3">
-          <a href="#contact" class="w-full text-center py-2.5 bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs rounded-lg transition shadow">Contact Directly</a>
-          <a href="https://github.com/jainlav" target="_blank" class="px-4 py-2.5 bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold rounded-lg transition"><i class="fa-brands fa-github"></i></a>
+        <div class="mt-6 pt-4 border-t border-slate-700">
+          <a href="#contact" class="block w-full text-center py-2.5 bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs rounded-lg transition shadow">Contact Directly</a>
         </div>
       </div>
 
@@ -269,7 +268,7 @@
         <h2 class="text-3xl font-bold mt-2">Platforms & Data Ecosystems</h2>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
         <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-xl">
           <i class="fa-solid fa-cloud text-brand-400 text-2xl mb-3"></i>
           <h4 class="font-bold text-base text-white">Microsoft Fabric</h4>
@@ -279,11 +278,6 @@
           <i class="fa-solid fa-database text-sky-400 text-2xl mb-3"></i>
           <h4 class="font-bold text-base text-white">Azure Databricks</h4>
           <p class="text-xs text-slate-400 mt-1">DP-750 Certified • Lakehouse Pipelines</p>
-        </div>
-        <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-xl">
-          <i class="fa-solid fa-snowflake text-cyan-300 text-2xl mb-3"></i>
-          <h4 class="font-bold text-base text-white">Snowflake & SQL</h4>
-          <p class="text-xs text-slate-400 mt-1">Enterprise Data Warehousing</p>
         </div>
         <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-xl">
           <i class="fa-solid fa-chart-pie text-emerald-400 text-2xl mb-3"></i>
@@ -303,11 +297,11 @@
       </p>
       
       <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold">
-        <a href="https://github.com/jainlav" target="_blank" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow flex items-center gap-2 transition">
-          <i class="fa-brands fa-github text-lg"></i> GitHub Profile
+        <a href="https://www.linkedin.com/in/jainlav/" target="_blank" class="px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white rounded-xl shadow flex items-center gap-2 transition">
+          <i class="fa-brands fa-linkedin text-lg"></i> Connect on LinkedIn
         </a>
-        <a href="https://jainlav.github.io" target="_blank" class="px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white rounded-xl shadow flex items-center gap-2 transition">
-          <i class="fa-solid fa-globe text-lg"></i> GitHub Pages Link
+        <a href="mailto:jain.lav@gmail.com" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow flex items-center gap-2 transition">
+          <i class="fa-solid fa-envelope text-lg"></i> Send Email
         </a>
       </div>
     </div>
@@ -346,7 +340,7 @@
     </div>
   </div>
 
-  <!-- Dual-Host Compatible Fetch Engine with Link Sanitization -->
+  <!-- Universal Fetch Engine (GitHub Pages & Vercel Dual Host Support) -->
   <script>
     async function openMarkdownModal(fileName, title) {
       const modal = document.getElementById('mdModal');
@@ -362,15 +356,18 @@
       
       modal.classList.remove('hidden');
 
-      // Clean filename passed in
       const cleanFileName = fileName.replace(/^.*[\\\/]/, '');
 
-      // Multi-tier path fallback strategy to guarantee compatibility across GitHub Pages & Vercel
+      // Determine current host path root dynamically
+      const currentPath = window.location.pathname.endsWith('/') 
+        ? window.location.pathname 
+        : window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+
       const targetPaths = [
+        `${currentPath}portfolio/${cleanFileName}`,
         `portfolio/${cleanFileName}`,
         `./portfolio/${cleanFileName}`,
-        `/${cleanFileName}`,
-        `./${cleanFileName}`
+        `/${cleanFileName}`
       ];
 
       let rawText = null;
@@ -388,7 +385,7 @@
       }
 
       if (rawText !== null) {
-        // 1. Strip YAML Front-Matter if present (--- title: ... ---)
+        // Strip Front-Matter metadata if present
         if (rawText.startsWith('---')) {
           const secondDashIndex = rawText.indexOf('---', 3);
           if (secondDashIndex !== -1) {
@@ -396,7 +393,7 @@
           }
         }
 
-        // 2. Filter out "Back to Home" links dynamically for modal rendering
+        // Filter out "Back to Home" links dynamically
         rawText = rawText.replace(/\[.*Back to Home.*\]\(.*\)/gi, '');
 
         modalBody.innerHTML = marked.parse(rawText);
@@ -414,7 +411,6 @@
       document.getElementById('mdModal').classList.add('hidden');
     }
 
-    // Close modal on Escape key press
     document.addEventListener('keydown', function(event) {
       if (event.key === "Escape") closeModal();
     });
