@@ -18,6 +18,8 @@ I specialize in translating enterprise business objectives into scalable data pl
 
 This is demonstrated through initiatives that I have shaped and led end-to-end—from identifying foundational data challenges and recommending enterprise-wide solutions, to architecting and delivering Data Quality and Master Data standardization platforms that serve as upstream enablers for multiple business-critical applications across Sales, Supply Chain, Finance and Operations.
 
+A significant part of my work has been focused on Supply Chain Analytics — beyond building visibility — I look for where analytics can directly generate financial yield: surfacing margin recovery opportunities, flagging cost leakage, and identifying savings within the reporting layer itself rather than leaving them buried in a report someone has to act on separately.
+
 My work is recognized for architectural foresight and a consistent focus on building scalable, standardized, and reusable platforms that remain stable and extensible long after engagement.
 
 ---
@@ -39,6 +41,9 @@ Chosen among 20 global champions (from an initial planned cohort of 10) based on
 
 * **Business Analysis & Data Governance**  
 Translating executive vision into precise functional and non-functional requirements, designing scalable, secure, and compliant data solutions with a governance-first approach focused on auditability and data integrity.
+
+* **Supply Chain Analytics & Workflow automation**
+Designing S&OP planning systems, multi-ERP spend consolidation, and maverick-spend/PO-compliance controls, then closing the loop with embedded write-back and exception-driven workflow automation — turning analytics from passive reporting into actionable intelligence.
 
 * **Project Management & Coaching**  
 Leading cross-functional teams to deliver enterprise-grade analytics solutions while mentoring teams and embedding best practices across delivery lifecycles.
