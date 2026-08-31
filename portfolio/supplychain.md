@@ -6,7 +6,7 @@ nav_title: Supply Chain Planning
 # Supply Chain Analytics, Planning & Process Automation
 _*All projects listed were delivered within corporate enterprise environments; technical source code is proprietary and cannot be shared._
 
-This domain focuses on designing planning ecosystems that align revenue objectives, demand signals, inventory strategy, and procurement execution through automated Sales & Operations Planning (S&OP) solutions.
+This domain spans the planning, procurement, and partner-facing systems that keep a supply chain running — from demand and inventory planning to vendor collaboration, procurement governance, and customer-facing analytics portals.
 
 ---
 
