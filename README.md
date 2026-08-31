@@ -2,7 +2,7 @@
 ## Enterprise Data Analytics Expert & Leader with Governance-First Approach | 15 Years of Delivery Excellence
 ---
 ## Profile Summary
-I am a Data Analytics Expert & Leader with 15 years of experience delivering end-to-end BI solutions across complex, multinational organizations. I specialize in translating enterprise business objectives into scalable data & analytics solutions that connect strategy, operations, and execution. 
+I am a Principal Data Architect & Analytics Expert with 15 years of experience delivering end-to-end BI solutions across complex, multinational organizations. I specialize in translating enterprise business objectives into scalable data & analytics solutions that connect strategy, operations, and execution. 
 A significant part of my work has been focused on Supply Chain Analytics — beyond building visibility — I look for where analytics can directly generate financial yield: surfacing margin recovery opportunities, flagging cost leakage, and identifying savings within the reporting layer itself rather than leaving them buried in a report someone has to act on separately.
 My work is recognized for architectural foresight and a consistent focus on building scalable, standardized, and reusable platforms that remain stable and extensible long after engagement.
 
