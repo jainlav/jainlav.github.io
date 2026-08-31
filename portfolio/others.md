@@ -7,7 +7,7 @@ nav_title: Additional Initiatives
 
 _*All projects listed were delivered within corporate enterprise environments; technical source code is proprietary and cannot be shared._
 
-_*A collection of initiatives spanning data governance, CRM, HR, and enterprise performance analytics — complementing the domain-specific work featured elsewhere in this portfolio.._
+_*A collection of initiatives spanning data governance, CRM, HR, and enterprise performance analytics — complementing the domain-specific work featured elsewhere in this portfolio._
 
 ---
 ### 1. Enterprise Data Quality & Master Data Standardization
