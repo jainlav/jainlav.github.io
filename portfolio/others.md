@@ -3,7 +3,7 @@ layout: default
 title: Additional Initiatives [7]
 nav_title: Additional Initiatives
 ---
-# Other Projects (Data Management, CRM, HR, Enterprise Performance Analytics etc.)
+# Additional Initiatives (Data Management, CRM, HR, Enterprise Performance Analytics etc.)
 
 _*All projects listed were delivered within corporate enterprise environments; technical source code is proprietary and cannot be shared._
 
