@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Platform Migrations/Modernization [3]
-nav_title: Platform Migrations/Modernization
+title: Platform Migrations [3]
+nav_title: Platform Migrations & Modernization
 ---
 # Platform Migrations
 _*All projects listed were delivered within corporate enterprise environments; technical source code is proprietary and cannot be shared._
