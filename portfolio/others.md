@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Other Projects [7]
-nav_title: Other Projects
+title: Additional Initiatives [7]
+nav_title: Additional Initiatives
 ---
 # Other Projects (Data Management, CRM, HR, Enterprise Performance Analytics etc.)
 
 _*All projects listed were delivered within corporate enterprise environments; technical source code is proprietary and cannot be shared._
 
-_*This section includes additional projects covering a wider range of domains and use cases, complementing the projects highlighted in domain-specific sections._
+_*A collection of initiatives spanning data governance, CRM, HR, and enterprise performance analytics — complementing the domain-specific work featured elsewhere in this portfolio.._
 
 ---
 ### 1. Enterprise Data Quality & Master Data Standardization
