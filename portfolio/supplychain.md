@@ -91,7 +91,7 @@ Delivered a highly automated and self-correcting planning engine that improved p
 
 ---
 
-### 4. Vendor Insights & Documentation Portal
+### 4. Vendor Fulfillment Portal
 
 <p style="margin-top:-8px;"><strong><em>Renewable Energy | San Francisco, USA</em></strong></p>
 
@@ -99,22 +99,21 @@ Delivered a highly automated and self-correcting planning engine that improved p
 The organization operated without a centralized vendor collaboration platform, relying on fragmented email communication and manual follow-ups to manage shipments and supplier documentation. This lack of structure created poor operational visibility, inconsistent document controls, and significant administrative overhead across the supply chain.
 
 * **Stakeholders:**
-Operations Leadership, Director- Digital & Analytics and IT Delivery Teams.
+VP-Operations, Operations Associate,Buyer/Planner, Director- Digital & Analytics and IT Delivery Teams.
 
 * **Approach:**
-Designed a Greenfield vendor collaboration ecosystem using Qlik and Inphinity Forms to digitize supplier interactions, shipment visibility, and documentation workflows. The solution was architected as a secure multi-tenant environment to ensure strict vendor data isolation while introducing governed approval processes and actionable performance analytics.
+Designed a Greenfield vendor collaboration ecosystem using Qlik and Inphinity Forms to digitize supplier interactions, shipment visibility, and documentation workflows. The solution was architected as a secure multi-tenant environment to ensure strict vendor data isolation while introducing governed approval processes to replace ad hoc, email-based coordination.
 
 * **Execution:**
-  * Architected a secure multi-tenant access model ensuring each vendor could only view and interact with its own shipments, documents, and operational records.
-  * Engineered a centralized vendor portal that replaced fragmented communication channels with a structured digital interface for supplier collaboration.
-  * Built workflow-driven document submission, rejection, and re-approval processes with mandatory justification trails to support audit readiness and governance controls.
-  * Developed shipment tracking and operational visibility dashboards enabling internal teams and vendors to monitor fulfillment progress in near real time.
-  * Established a single source of truth for vendor transactions, documentation status, and supply chain activity across the supplier network.
-  * Delivered actionable analytics for vendor performance, turnaround times, bottleneck identification, and workflow delays to support proactive issue resolution.
-  * Collaborated with business stakeholders to define process controls, approval logic, and vendor onboarding requirements for the new platform.
+  * Architected and tested a secure multi-tenant access model, verified through UAT, ensuring each vendor could only view and interact with its own shipments and documents.
+  * Engineered a centralized vendor portal that replaced fragmented communication channels with a structured digital interface for supplier shipment submission.
+  * Built a workflow-driven approval process — Draft → Submitted → Processing → Changes Requested → Approved/Rejected — enforced by constraint-based business rules governing what vendors and approvers could each see and edit, with mandatory notes for tracking why changes were requested.
+  * Developed order- and shipment-level tracking views giving vendors and internal approvers real-time visibility into what had shipped, what remained outstanding, and current approval status.
+  * Delivered field-level validation and guardrails (date ranges, format checks, quantity limits tied to remaining order balance) to prevent invalid or over-shipment data entry at the source.
+  * Collaborated with business stakeholders to define process controls, approval logic, and vendor on-boarding requirements for the platform.
 
 * **Result:**
-Successfully transformed a manual no-system supplier environment into a secure digital-first operating model. Improved vendor transparency, strengthened compliance through governed document workflows, and significantly reduced administrative effort. The platform established scalable vendor infrastructure projected to deliver substantial long-term operational capacity savings over a multi-year horizon.
+Delivered a complete, validated end-to-end vendor collaboration platform that replaced manual, email-driven shipment coordination with a structured, governed digital workflow — improving shipment visibility, reducing administrative back-and-forth between vendors and internal approvers, and giving both sides real-time status on what had shipped, what remained outstanding, and where each approval stood. The multi-tenant, warehouse-scoped architecture was built to scale to additional vendors and warehouses. Final production roll-out awaited a downstream Dynamics 365 write- back integration owned by the client's internal team. The VP of Operations projected the platform to save the equivalent of 10 employees' effort over three years once fully in use.
 
 ---
 
